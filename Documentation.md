@@ -1,18 +1,19 @@
 # Infinite Yield UI Library
+```lua
 local IY = loadstring(game:HttpGet('https://raw.githubusercontent.com/Git-art-byte/Infinite-Yield-UI-Library/refs/heads/main/source.Luau'))()
 repeat task.wait() until _G.IY_LOADED  
-
+```
 ## Remove Premade CMDs(optional)
-
+```lua
 if _G.CMDs then
     _G.CMDs = {}          -- clear the command table
     if _G.refreshCmds then
         _G.refreshCmds()  -- refresh the UI to show an empty list
     end
 end
-
+```
 # Custom Commands
-
+```lua
 local MyCommandLib = {}
 
 function MyCommandLib:Register(cmdName, description, func)
@@ -53,3 +54,4 @@ MyCommandLib:Register("mycmd", "My custom command", function(args, speaker)
 end)
 
 print("Use ;hello or ;mycmd")
+```
